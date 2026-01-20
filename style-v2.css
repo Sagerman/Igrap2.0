@@ -41,7 +41,7 @@ a { text-decoration: none; color: inherit; } ul { list-style: none; } img { max-
 .hero-slider {
     position: relative; min-height: 70vh; border-radius: 20px; margin: 20px;
     overflow: hidden; display: flex; align-items: center;
-    background-image: url('imagenes/Fondo.png'); background-size: cover; background-position: center;
+    background-image: url('imagenes/fondo.png'); background-size: cover; background-position: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 .hero-slider::before {
@@ -273,7 +273,7 @@ a { text-decoration: none; color: inherit; } ul { list-style: none; } img { max-
     
     color: white;
     /* Imagen Base: usar la misma imagen "Fondo.png" */
-    background-image: url('imagenes/Fondo.png');
+    background-image: url('imagenes/fondo.png');
     background-size: cover;
     background-position: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
