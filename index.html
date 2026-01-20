@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGRAP Publicidad Perú | Insumos y Maquinaria</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:900,800,600,500,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style-v2.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-8.png" alt="IGRAP Logo">
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-wrapper" id="navMenu">
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <div class="search-box-wrapper">
+                        <form class="search-box" id="searchForm">
+                            <input type="text" id="searchInput" placeholder="Buscar producto..." autocomplete="off">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=51912207645" class="btn-cotizar" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-slider">
+        
+        <div class="slide active">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Todo en un solo lugar para tu <span class="highlight">publicidad</span></h1>
+                    <p>Importadores directos de Impresoras Eco Solventes de alta resolución. Tecnología y respaldo garantizado.</p>
+                    <div class="hero-buttons">
+                        <a href="impresoras.html" class="btn btn-primary">Ver Maquinaria</a>
+                        <a href="https://api.whatsapp.com/send?phone=51912207645" class="btn btn-outline" target="_blank">Cotizar Ahora</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/impresora-1.png" alt="Impresora Eco Solvent">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Vinilos de <span class="highlight">Alta Adherencia</span> y Blancura</h1>
+                    <p>Ideales para impresión digital de gran formato. Colores vibrantes, secado rápido y adhesivo permanente.</p>
+                    <div class="hero-buttons">
+                        <a href="vinil.html" class="btn btn-primary">Ver Vinilos</a>
+                        <a href="https://api.whatsapp.com/send?phone=51912207645" class="btn btn-outline" target="_blank">Consultar Stock</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="imagenes/vinil.png" alt="Rollos de Vinil IGRAP">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Protección UV con <span class="highlight">Laminados</span> Premium</h1>
+                    <p>Acabados Mate, Glossy y 3D. Protege tus impresiones del sol y los rayones con la mejor calidad del mercado.</p>
+                    <div class="hero-buttons">
+                        <a href="laminados.html" class="btn btn-primary">Ver Laminados</a>
+                        <a href="https://api.whatsapp.com/send?phone=51912207645" class="btn btn-outline" target="_blank">Cotizar</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="imagenes/laminado.png" alt="Rollos de Laminado IGRAP">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Exhibición Portátil con <span class="highlight">Roll Ups</span></h1>
+                    <p>Estructuras de aluminio ligeras y resistentes. Lleva tu marca a ferias y eventos en cuestión de segundos.</p>
+                    <div class="hero-buttons">
+                        <a href="display.html" class="btn btn-primary">Ver Displays</a>
+                        <a href="https://api.whatsapp.com/send?phone=51912207645" class="btn btn-outline" target="_blank">Ver Tamaños</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://c.animaapp.com/mfj34b9ydCziWn/img/rectangle.png" alt="Display Roll Up Banner">
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </section>
+
+    <section class="brands-section container">
+        <p class="brands-title">Nuestras Marcas Asociadas</p>
+        <div class="brands-wrapper">
+            <div class="brands-slider">
+                <div class="brands-track">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/capa-1-1.svg" alt="KingJet">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-7.png" alt="InfiniLam">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/capa-1.svg" alt="StarTack">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-9.png" alt="XL Display">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/capa-1-2.svg" alt="InkAll">
+                </div>
+                <div class="brands-track">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/capa-1-1.svg" alt="KingJet">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-7.png" alt="InfiniLam">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/capa-1.svg" alt="StarTack">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-9.png" alt="XL Display">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/capa-1-2.svg" alt="InkAll">
+                </div>
+            </div>
+            <div class="fade-left"></div>
+            <div class="fade-right"></div>
+        </div>
+    </section>
+
+    <section class="values-section container">
+        <div class="values-grid">
+            <div class="values-text">
+                <h2>Aquí inicia tu <br><span class="highlight">creatividad</span></h2>
+                <h2 class="brand-name">IGRAP</h2>
+                <p>Más que insumos, te damos las herramientas para que tu negocio de publicidad nunca se detenga.</p>
+                <a href="nosotros.html" class="btn-link">Conoce más de nosotros &rarr;</a>
+            </div>
+            <div class="values-cards">
+                <div class="value-card">
+                    <div class="img-box"><img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-1.png" alt="Importadores"></div>
+                    <div><h3>Importadores Directos</h3><p>Sin intermediarios. Garantizamos precio competitivo y calidad de origen.</p></div>
+                </div>
+                <div class="value-card">
+                    <div class="img-box"><img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-2.png" alt="Asesoría"></div>
+                    <div><h3>Asesoría Personalizada</h3><p>Expertos reales te guían para elegir el insumo exacto que necesitas.</p></div>
+                </div>
+                <div class="value-card">
+                    <div class="img-box"><img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group.png" alt="Stock"></div>
+                    <div><h3>Siempre con Stock</h3><p>Almacenes listos para despachar. Tu producción no puede esperar.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-categorias container">
+        <h2 class="section-title">Nuestras Líneas Principales</h2>
+        <div class="grid-categorias">
+            
+            <div class="card product-card">
+                <div class="card-img">
+                    <img src="https://c.animaapp.com/mfkhyjc4GW5dQy/img/capa-1.svg" alt="Impresoras Eco Inkall">
+                    <div class="badge-weight"><span>XP</span><small>600</small></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Impresoras Eco Inkall</h3>
+                        <span class="brand-tag">Respaldo KingJet</span>
+                    </div>
+                    <p>Alta resolución, estabilidad industrial y el mejor rendimiento del mercado.</p>
+                    <a href="impresoras.html" class="btn-card">Ver Modelos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card product-card">
+                <div class="card-img">
+                    <img src="imagenes/vinil.png" alt="Vinilos y Laminados">
+                    <div class="badge-top"><i class="fas fa-star"></i> TOP 1</div>
+                </div>
+                <div class="card-content">
+                    <h3>Vinilos y Laminados</h3>
+                    <p>Insumos de alta adherencia y durabilidad para acabados perfectos.</p>
+                    <a href="vinil.html" class="btn-card">Ver Catálogo <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card product-card">
+                <div class="card-img">
+                    <img src="https://c.animaapp.com/mfj34b9ydCziWn/img/rectangle.png" alt="Displays Roll Up">
+                    <div class="badge-simple">PORTÁTIL</div>
+                </div>
+                <div class="card-content">
+                    <h3>Displays (Roll Screen)</h3>
+                    <p>Estructuras ligeras y fáciles de armar para destacar en tus eventos.</p>
+                    <a href="display.html" class="btn-card">Ver Tamaños <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="founder-section container">
+        <div class="founder-card">
+            <div class="founder-bg-pattern"></div>
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/rectangle.png" alt="Alexis Velasquez">
+                    <div class="founder-name">Alexis Velasquez</div>
+                </div>
+                <div class="founder-text">
+                    <h2 class="founder-title">IGRAP</h2>
+                    <div class="founder-divider"></div>
+                    <p>"Somos una empresa especializada en importar y comercializar productos para la industria publicitaria, enfocada en relaciones duraderas, calidad constante y precios competitivos."</p>
+                    <span class="founder-role">CEO & Fundador</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section container">
+        <div class="section-header">
+            <span class="section-subtitle">TESTIMONIOS REALES</span>
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"La tinta ecológica tiene un acabado impecable. Funciona perfecto con mis equipos y rinde más de lo esperado."</p>
+                <div class="testimonial-user"><h4>Laura R.</h4><span>Diseñadora Independiente</span></div>
+            </div>
+            <div class="testimonial-card featured">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"¡Pedí vinilo blanco y en un abrir y cerrar de ojos ya estaba en mis manos! La atención fue inmediata y me asesoraron con todo detalle. ¡100% recomendados!"</p>
+                <div class="testimonial-user"><h4>Carlos M.</h4><span>Impresor Profesional</span></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"Más que una tienda, sentí que hablaba con alguien que entiende lo que necesito para trabajar. Excelente servicio."</p>
+                <div class="testimonial-user"><h4>Andrés G.</h4><span>Publicista</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="action-center-section container">
+        <div class="action-grid">
+            <div class="action-card newsletter-card">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h3>Únete al Boletín de IGRAP</h3>
+                        <p>Recibe ofertas exclusivas, novedades de stock y tips para tu negocio.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" id="newsletterEmail" placeholder="Ingresa tu correo electrónico">
+                        <button type="button" id="btnSubscribe">Suscribirme</button>
+                    </form>
+                </div>
+                <div class="newsletter-icon"><i class="fas fa-paper-plane"></i></div>
+            </div>
+            <div class="action-links-col">
+                <a href="contacto.html" class="action-card link-card contact-card">
+                    <div class="link-icon"><i class="fas fa-headset"></i></div>
+                    <div class="link-text"><h3>¿Dudas?</h3><span>Contáctanos ahora &rarr;</span></div>
+                </a>
+                <a href="#" class="action-card link-card catalog-card" id="btnCatalog">
+                    <div class="link-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="link-text"><h3>Ver Catálogo</h3><span>Descargar PDF &rarr;</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            
+            <div class="footer-links-container">
+                
+                <div class="footer-column footer-contact">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-8.png" alt="IGRAP" class="footer-logo-internal">
+                    
+                    <h4 class="footer-title">Ponte en Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-label">Dirección:</span>
+                            <span class="contact-text">Av. Garcilazo de la Vega 1132, Cercado de Lima, Perú</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Correo:</span>
+                            <a href="mailto:contacto@igrap.com" class="contact-link">contacto@igrap.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Teléfono:</span>
+                            <a href="tel:+51912207645" class="contact-link">+51 912 207 645</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Productos</h4>
+                    <ul class="footer-links">
+                        <li><a href="vinil.html">Vinilos</a></li>
+                        <li><a href="laminados.html">Laminados</a></li>
+                        <li><a href="display.html">Display</a></li>
+                        <li><a href="impresoras.html">Impresoras</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column footer-social">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Igrap.Peru" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/igrap.pe/" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <span class="social-link disabled">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer-payment-section">
+                <h4 class="payment-title">Métodos de Pago</h4>
+                <div class="payment-logos">
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpk2wn6YYQ4H5/img/image.png" alt="BCP" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpmzffv5RvxuN/img/image.png" alt="BBVA" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpnqcsqdg50ND/img/image.png" alt="Scotiabank" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpnqcsqdg50ND/img/image_1.png" alt="Interbank" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpozovgirZGvK/img/image.png" alt="Visa" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpozovgirZGvK/img/image_1.png" alt="Mastercard" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpq53v1vkQKTa/img/image.png" alt="Amex" />
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>© 2026 IGRAP Perú. Todos los Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-v2.js"></script>
+</body>
+</html>

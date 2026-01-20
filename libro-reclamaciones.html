@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones | IGRAP Publicidad Perú</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:900,800,600,500,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style-v2.css">
+</head>
+<body class="legal-page-body">
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-8.png" alt="IGRAP Logo">
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-wrapper" id="navMenu">
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <div class="search-box-wrapper">
+                        <form class="search-box" id="searchForm">
+                            <input type="text" id="searchInput" placeholder="Buscar producto..." autocomplete="off">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=51912207645" class="btn-cotizar" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero legal-hero-bg">
+        <div class="container">
+            <h1>LIBRO DE <span class="highlight">RECLAMACIONES</span></h1>
+            <p>Tu opinión nos ayuda a mejorar. Registra aquí tu queja o reclamo.</p>
+        </div>
+    </section>
+
+    <section class="legal-content-section">
+        <div class="container">
+            <div class="legal-card-modern">
+                
+                <form id="reclamacionesForm" action="https://formspree.io/f/myzdqldk" method="POST">
+                    
+                    <div class="legal-block">
+                        <h3 class="section-heading"><span class="num">01.</span> Identificación de la Empresa</h3>
+                        <div class="legal-info-box">
+                            <p><strong>Empresa:</strong> IMPORT GRAPHIC PRIME S.A.C.</p>
+                            <p><strong>RUC:</strong> [Número de RUC]</p>
+                            <p><strong>Dirección Fiscal:</strong> Av. Garcilazo de la Vega 1132, Cercado de Lima, Perú</p>
+                            <p><strong>Fecha de Registro:</strong> <span id="currentDate"></span></p>
+                        </div>
+                    </div>
+
+                    <hr class="legal-divider">
+
+                    <div class="legal-block">
+                        <h3 class="section-heading"><span class="num">02.</span> Identificación del Consumidor</h3>
+                        
+                        <div class="legal-form-grid">
+                            <div class="legal-form-group">
+                                <label class="legal-label">Tipo de Documento <span class="required">*</span></label>
+                                <select class="legal-select" id="tipoDocumento" name="tipoDocumento" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="DNI">DNI</option>
+                                    <option value="CE">Carné de Extranjería</option>
+                                    <option value="PASAPORTE">Pasaporte</option>
+                                </select>
+                            </div>
+                            <div class="legal-form-group">
+                                <label class="legal-label">Número de Documento <span class="required">*</span></label>
+                                <input type="text" class="legal-input" id="documento" name="documento" required>
+                            </div>
+
+                            <div class="legal-form-group">
+                                <label class="legal-label">Nombres <span class="required">*</span></label>
+                                <input type="text" class="legal-input" id="nombres" name="nombres" required>
+                            </div>
+                            <div class="legal-form-group">
+                                <label class="legal-label">Apellidos <span class="required">*</span></label>
+                                <input type="text" class="legal-input" id="apellidos" name="apellidos" required>
+                            </div>
+
+                            <div class="legal-form-group form-full-width">
+                                <label class="legal-label">Dirección / Domicilio <span class="required">*</span></label>
+                                <input type="text" class="legal-input" id="direccion" name="direccion" required>
+                            </div>
+
+                            <div class="legal-form-group">
+                                <label class="legal-label">Email <span class="required">*</span></label>
+                                <input type="email" class="legal-input" id="email" name="email" required>
+                            </div>
+                            <div class="legal-form-group">
+                                <label class="legal-label">Celular <span class="required">*</span></label>
+                                <input type="tel" class="legal-input" id="telefonoCelular" name="telefonoCelular" required>
+                            </div>
+                            
+                            <div class="legal-form-group form-full-width checkbox-wrapper">
+                                <input type="checkbox" id="menorEdad" name="menorEdad">
+                                <label for="menorEdad">Soy menor de edad (requiere apoderado)</label>
+                            </div>
+
+                            <div class="legal-form-group form-full-width" id="apoderadoGroup" style="display: none;">
+                                <label class="legal-label">Nombre del Apoderado</label>
+                                <input type="text" class="legal-input" id="apoderado" name="apoderado">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="legal-divider">
+
+                    <div class="legal-block">
+                        <h3 class="section-heading"><span class="num">03.</span> Bien Contratado</h3>
+                        <div class="legal-form-grid">
+                            <div class="legal-form-group">
+                                <label class="legal-label">Tipo de Bien <span class="required">*</span></label>
+                                <select class="legal-select" id="tipoBien" name="tipoBien" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="PRODUCTO">PRODUCTO</option>
+                                    <option value="SERVICIO">SERVICIO</option>
+                                </select>
+                            </div>
+                            <div class="legal-form-group">
+                                <label class="legal-label">Monto Reclamado</label>
+                                <div style="display: flex; gap: 10px;">
+                                    <select class="legal-select" id="moneda" name="moneda" style="width: 80px;">
+                                        <option value="PEN">S/</option>
+                                        <option value="USD">US$</option>
+                                    </select>
+                                    <input type="number" class="legal-input" id="importe" name="importe" step="0.01" placeholder="0.00">
+                                </div>
+                            </div>
+                            <div class="legal-form-group form-full-width">
+                                <label class="legal-label">Descripción del Bien/Servicio <span class="required">*</span></label>
+                                <input type="text" class="legal-input" id="descripcion" name="descripcion" required placeholder="Ej: Impresora Eco Solvente XP600...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="legal-divider">
+
+                    <div class="legal-block">
+                        <h3 class="section-heading"><span class="num">04.</span> Detalle de la Reclamación</h3>
+                        <div class="legal-form-grid">
+                            <div class="legal-form-group">
+                                <label class="legal-label">Tipo <span class="required">*</span></label>
+                                <select class="legal-select" id="tipo" name="tipo" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="QUEJA">QUEJA (Malestar o descontento)</option>
+                                    <option value="RECLAMO">RECLAMO (Disconformidad con el bien)</option>
+                                </select>
+                            </div>
+                            <div class="legal-form-group">
+                                <label class="legal-label">Motivo <span class="required">*</span></label>
+                                <select class="legal-select" id="motivo" name="motivo" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="PRODUCTO_DEFECTUOSO">Producto Defectuoso</option>
+                                    <option value="SERVICIO_INADECUADO">Servicio Inadecuado</option>
+                                    <option value="DEMORA_ENTREGA">Demora en Entrega</option>
+                                    <option value="ATENCION_CLIENTE">Atención al Cliente</option>
+                                    <option value="OTROS">Otros</option>
+                                </select>
+                            </div>
+                            <div class="legal-form-group form-full-width">
+                                <label class="legal-label">Detalle completo de lo ocurrido <span class="required">*</span></label>
+                                <textarea class="legal-textarea" id="detalle" name="detalle" rows="5" required placeholder="Describa aquí los hechos..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-footer-contact" style="text-align: left; margin-top: 30px;">
+                        <div class="checkbox-wrapper" style="margin-bottom: 20px;">
+                            <input type="checkbox" id="confirmacion" name="confirmacion" required>
+                            <label for="confirmacion"><strong>Declaro que la información proporcionada es veraz y acepto el registro de este reclamo.</strong> <span class="required">*</span></label>
+                        </div>
+                        
+                        <div class="form-actions" style="text-align: center; margin-top: 30px;">
+                            <button type="submit" class="btn btn-primary" style="padding: 15px 40px;">REGISTRAR RECLAMO</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links-container">
+                <div class="footer-column footer-contact">
+                    <img src="https://c.animaapp.com/mfcy9taiuVd0tW/img/group-8.png" alt="IGRAP" class="footer-logo-internal">
+                    <h4 class="footer-title">Ponte en Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item"><span class="contact-label">Dirección:</span><span class="contact-text">Av. Garcilazo de la Vega 1132, Cercado de Lima, Perú</span></div>
+                        <div class="contact-item"><span class="contact-label">Correo:</span><a href="mailto:contacto@igrap.com" class="contact-link">contacto@igrap.com</a></div>
+                        <div class="contact-item"><span class="contact-label">Teléfono:</span><a href="tel:+51912207645" class="contact-link">+51 912 207 645</a></div>
+                    </div>
+                </div>
+                <div class="footer-column footer-spacer">
+                    <h4 class="footer-title">Productos</h4>
+                    <ul class="footer-links">
+                        <li><a href="vinil.html">Vinilos</a></li><li><a href="laminados.html">Laminados</a></li><li><a href="display.html">Display</a></li><li><a href="impresoras.html">Impresoras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="productos.html">Productos</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li><li><a href="terminos-condiciones.html">Términos y Condiciones</a></li><li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li><li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-social">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Igrap.Peru" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="https://www.instagram.com/igrap.pe/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                        <span class="social-link disabled"><i class="fab fa-tiktok"></i> TikTok</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-payment-section">
+                <h4 class="payment-title">Métodos de Pago</h4>
+                <div class="payment-logos">
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpk2wn6YYQ4H5/img/image.png" alt="BCP" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpmzffv5RvxuN/img/image.png" alt="BBVA" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpnqcsqdg50ND/img/image.png" alt="Scotiabank" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpnqcsqdg50ND/img/image_1.png" alt="Interbank" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpozovgirZGvK/img/image.png" alt="Visa" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpozovgirZGvK/img/image_1.png" alt="Mastercard" />
+                    <img class="payment-logo" src="https://c.animaapp.com/mfpq53v1vkQKTa/img/image.png" alt="Amex" />
+                </div>
+            </div>
+            <div class="footer-copyright"><p>© 2026 IGRAP Perú. Todos los Derechos Reservados.</p></div>
+        </div>
+    </footer>
+
+    <script src="script-v2.js"></script>
+    
+    <script>
+      // 1. Poner fecha actual
+      document.getElementById('currentDate').textContent = new Date().toLocaleDateString('es-PE');
+      
+      // 2. Lógica Menor de Edad
+      document.getElementById('menorEdad').addEventListener('change', function() {
+        const apoderadoGroup = document.getElementById('apoderadoGroup');
+        const apoderadoInput = document.getElementById('apoderado');
+        if (this.checked) {
+          apoderadoGroup.style.display = 'block';
+          apoderadoInput.required = true;
+        } else {
+          apoderadoGroup.style.display = 'none';
+          apoderadoInput.required = false;
+          apoderadoInput.value = '';
+        }
+      });
+      
+      // 3. Validación y Envío (Simple)
+      document.getElementById('reclamacionesForm').addEventListener('submit', function(e) {
+          // Si el formulario es válido, el navegador lo envía a Formspree automáticamente.
+          // Aquí solo mostramos un mensaje previo o validaciones extra si se necesita.
+          // Nota: Formspree redirigirá a su página de "Gracias" por defecto.
+      });
+    </script>
+
+</body>
+</html>
